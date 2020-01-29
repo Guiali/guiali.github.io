@@ -126,7 +126,34 @@
     </div> <!-- end of copyright --> 
     <!-- end of copyright -->
     
-    	
+    <script type="text/javascript">
+        window.onload = function () {
+            var faceElement = document.getElementById('facelink');
+
+            function getMobileOperatingSystem() {
+                var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+                // Windows Phone must come first because its UA also contains "Android"
+                if (/windows phone/i.test(userAgent)) {
+                    return  console.log("ninguem usa isso");
+                }
+
+                if (/android/i.test(userAgent)) {
+                    return "fb://page/100989814800425";
+                }
+
+                // iOS detection from: http://stackoverflow.com/a/9039885/177710
+                if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                    return "fb://page/?id=100989814800425";
+                }
+
+                return "https://www.facebook.com/guialidigital";
+            }
+
+            faceElement.href = getMobileOperatingSystem();
+        }
+    </script>
+    
     <!-- Scripts -->
     <script src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
     <script src="js/popper.min.js"></script> <!-- Popper tooltip library for Bootstrap -->

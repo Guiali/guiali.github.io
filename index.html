@@ -67,25 +67,25 @@
                     <div class="" style="text-align: center;">
                         <h4>Contato</h4>
                         <span class="fa-stack">
-                            <a href="https://www.facebook.com/guialidigital/">
+                            <a href="" id="facelink">
                                 <i class="fas fa-circle fa-stack-2x"></i>
                                 <i class="fab fa-facebook-f fa-stack-1x"></i>
                             </a>
                         </span>
                         <span class="fa-stack">
-                            <a href="https://www.instagram.com/guialidigital/">
+                            <a href="https://www.instagram.com/guialioficial/">
                                 <i class="fas fa-circle fa-stack-2x"></i>
                                 <i class="fab fa-instagram fa-stack-1x"></i>
                             </a>
                         </span>
                         <span class="fa-stack">
-                            <a href="https://twitter.com/guialidigital">
+                            <a href="https://twitter.com/guialioficial">
                                 <i class="fas fa-circle fa-stack-2x"></i>
                                 <i class="fab fa-twitter fa-stack-1x"></i>
                             </a>
                         </span>
                         <span class="fa-stack">
-                            <a href="https://br.pinterest.com/guialidigital/">
+                            <a href="https://br.pinterest.com/guialioficial/">
                                 <i class="fas fa-circle fa-stack-2x"></i>
                                 <i class="fab fa-pinterest fa-stack-1x"></i>
                             </a>
@@ -128,7 +128,35 @@
     </div> <!-- end of copyright --> 
     <!-- end of copyright -->
     
-    	
+    <script type="text/javascript">
+        window.onload = function () {
+            var faceElement = document.getElementById('facelink');
+
+            function getMobileOperatingSystem() {
+                var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+                // Windows Phone must come first because its UA also contains "Android"
+                if (/windows phone/i.test(userAgent)) {
+                    return  console.log("ninguem usa isso");
+                }
+
+                if (/android/i.test(userAgent)) {
+                    return "fb://page/100989814800425";
+                }
+
+                // iOS detection from: http://stackoverflow.com/a/9039885/177710
+                if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                    return "fb://page/?id=100989814800425";
+                }
+
+                return "https://www.facebook.com/guialioficial";
+            }
+
+            faceElement.href = getMobileOperatingSystem();
+
+        }
+    </script>
+    
     <!-- Scripts -->
     <script src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
     <script src="js/popper.min.js"></script> <!-- Popper tooltip library for Bootstrap -->

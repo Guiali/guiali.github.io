@@ -6133,7 +6133,7 @@ button.bg-danger:focus {
 }
 
 .bg-light {
-  background-color: #f8f9fa !important;
+  background-color: #ffffff !important;
 }
 
 a.bg-light:hover, a.bg-light:focus,
@@ -10008,13 +10008,37 @@ ul.foodMenu {
   color: #FFF;
 }
 .menuBlack {
-  background-color: #000;
+  background-color: #191919;
+}
+#burguers-sanduiches {
+  background-image: url(../img/cardapio-burguers.jpg);
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: top 42px right -57%;
+}
+#outras-opcoes {
+  background-image: url(../img/cardapio-outras-opcoes.jpg);
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: top 0px right 0%;
+}
+#saladas {
+  background-image: url(../img/cardapio-saladas.jpg);
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: top -41px right -66%;
+}
+#bebidas {
+  background-image: url(../img/cardapio-sucos.jpg);
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: top 0px right -20%;
 }
 .contentBlack {
-  color: #000;
+  color: #191919;
 }
 .contentBlack .foodName, .contentBlack .foodPrice {
-  color: #000;
+  color: #191919;
 }
 
 .foodTitle2 {
